@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.collections.FXCollections?>
+<?import java.lang.String?>
+
+<VBox alignment="CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="davtests.mavenproject1.Responses">
+   <children>
+        <Label text="Fecha de Nacimiento"/>
+        <HBox spacing="20" alignment="CENTER_LEFT">
+            <Label text="Año:"/>
+            <TextField fx:id="inputYear"/>
+            <Label fx:id="discYear" text=""/>
+        </HBox>
+        <HBox spacing="20" alignment="CENTER_LEFT">
+            <Label text="Mes:"/>
+            <ComboBox fx:id="inputMonth" promptText="">
+                <items>
+                    <FXCollections fx:factory="observableArrayList">
+                        <String fx:value="Enero"/>
+                        <String fx:value="Febrero"/>
+                        <String fx:value="Marzo"/>
+                        <String fx:value="Abril"/>
+                        <String fx:value="Mayo"/>
+                        <String fx:value="Junio"/>
+                        <String fx:value="Julio"/>
+                        <String fx:value="Agosto"/>
+                        <String fx:value="Septiembre"/>
+                        <String fx:value="Octubre"/>
+                        <String fx:value="Noviembre"/>
+                        <String fx:value="Diciembre"/>
+                    </FXCollections>
+                </items>
+            </ComboBox>
+            <Label fx:id="discMonth" text=""/>
+        </HBox>
+        <HBox spacing="20" alignment="CENTER_LEFT">
+            <Label text="Día:"/>
+            <TextField fx:id="inputDay"/>
+            <Label fx:id="discDay" text=""/>
+        </HBox>
+        <HBox spacing="40" alignment="CENTER_LEFT">
+            <Button text="Calcular" onAction="#actionCalc"/> 
+            <Button text="Limpiar" onAction="#actionClear"/>
+        </HBox>
+        <Label fx:id="result" text=""/>
+   </children>
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+</VBox>
